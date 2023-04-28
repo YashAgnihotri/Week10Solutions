@@ -1,0 +1,38 @@
+Solution 1:
+int marks_summation(int* marks, int nos, char gender) {
+int sum=0;
+    if (gender=='b'){
+        for(int i=0;i<nos;i+=2){
+            sum+=marks[i];
+        }
+    }else{
+        for(int i=1;i<nos;i+=2){
+            sum+=marks[i];
+        }
+    }
+    return sum;
+}
+______________________________________________________________________________________________________________
+solution2:
+
+#include<stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    if (n < 5 || n > 50) {
+        printf("Invalid input");
+        return 0;
+    }
+    int arr[n];
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    for (int i = 0; i < n; i++) {
+        if (arr[i] % 5 == 0) {
+            printf("%d\n", arr[i]);
+        }
+    }
+    printf(" ");
+    return 0;
+}
